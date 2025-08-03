@@ -71,6 +71,15 @@
               "aot": true,
               "extractLicenses": true
             }
+            ,
+            "development": {
+              "optimization": false,
+              "outputHashing": "none",
+              "sourceMap": true,
+              "namedChunks": true,
+              "aot": false,
+              "extractLicenses": false
+            }
           }
         },
         "serve": {
