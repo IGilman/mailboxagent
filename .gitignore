@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+/.firebase
 
 # Node
 /node_modules
@@ -41,4 +42,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Config files
 /src/environments/*
+/.firebase
+/firebase.json
