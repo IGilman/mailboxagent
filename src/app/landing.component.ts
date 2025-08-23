@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
   imports: [
-    MatToolbarModule,
+    CommonModule,
+    FormsModule,
     MatButtonModule,
     MatIconModule,
     MatDividerModule
@@ -16,4 +18,21 @@ import { MatDividerModule } from '@angular/material/divider';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent {}
+export class LandingComponent {
+  formData = {
+    name: '',
+    email: '',
+    message: ''
+  };
+
+  submitForm() {
+    console.log('Form submitted:', this.formData);
+    // Here you would normally send the form data to your backend
+    alert('Thank you for your message! We\'ll get back to you soon.');
+    this.formData = {
+      name: '',
+      email: '',
+      message: ''
+    };
+  }
+}
