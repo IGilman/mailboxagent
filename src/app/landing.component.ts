@@ -24,6 +24,11 @@ export class LandingComponent {
     email: '',
     message: ''
   };
+  
+  // Method to get the current year for the copyright notice
+  getCurrentYear(): number {
+    return new Date().getFullYear();
+  }
 
   submitForm() {
     console.log('Form submitted:', this.formData);
